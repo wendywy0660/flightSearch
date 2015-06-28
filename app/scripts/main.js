@@ -6,7 +6,7 @@ $(function(){
 	$('#flightSearchTab a[href="#return"]').tab('show');
 
 	// Price range slider 
-	$("#priceRefine").noUiSlider({
+	$('#priceRefine').noUiSlider({
 		start: [0, 200],
 		connect: true,
 		range: {
@@ -20,8 +20,8 @@ $(function(){
 
 	// Datepicker
 	$('#flightSearchTab .input-group.date').datepicker({
-		format: "dd/mm/yyyy",
-    	startDate: "today",
+		format: 'dd/mm/yyyy',
+    	startDate: 'today',
 	    todayHighlight: true
 	});
 
@@ -50,7 +50,5 @@ $(function(){
 	}
 	textReplace();
 	$(window).on('resize', textReplace);
-	
-	
 
-})
+});

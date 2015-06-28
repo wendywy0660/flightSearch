@@ -28,7 +28,7 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar-material-blue">
+    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top navbar-material-blue">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Flight Search Engine</a>
+          <h1><a class="navbar-brand" href="#">Flight Search Engine</a></h1>
         </div>
       </div>
     </nav>
@@ -62,25 +62,25 @@
                   <div role="tabpanel" class="tab-pane fade" id="oneway">
                     <form>
                         <div class="form-group">
-                          <label for="flightFrom">From</label>
-                          <input type="text" class="form-control" id="flightFrom" placeholder="From">
+                          <label for="flightFromOneway">From</label>
+                          <input type="text" class="form-control" id="flightFromOneway" placeholder="From">
                         </div>
                         <div class="form-group">
-                          <label for="flightDestination">Destination</label>
-                          <input type="text" class="form-control" id="flightDestination" placeholder="Destination">
+                          <label for="flightDestinationOneway">Destination</label>
+                          <input type="text" class="form-control" id="flightDestinationOneway" placeholder="Destination">
                         </div>
 
                         <div class="form-group">
                           <label for="flightDepartureDateOneway">Departure Date</label>
-                          <div class="input-group date" id="flightDepartureDateOneway">
-                              <input class="form-control" type="text" placeholder="Departure Date">
+                          <div class="input-group date">
+                              <input class="form-control" id="flightDepartureDateOneway" type="text" placeholder="Departure Date">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                           </div>
                         </div>
                         
                         <div class="form-group">
-                          <label for="flightPassengers">Passengers</label>
-                          <select class="form-control" id="flightPassengers">
+                          <label for="flightPassengersOneway">Passengers</label>
+                          <select class="form-control" id="flightPassengersOneway">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -107,8 +107,8 @@
 
                         <div class="form-group">
                           <label for="flightDepartureDate">Departure Date</label>
-                            <div class="input-group date" id="flightDepartureDate">
-                              <input class="form-control" type="text" placeholder="Departure Date">
+                            <div class="input-group date">
+                              <input class="form-control" id="flightDepartureDate" type="text" placeholder="Departure Date">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                           </div>
                         </div>
@@ -116,8 +116,8 @@
                         
                         <div class="form-group">
                           <label for="flightReturnDate">Return Date</label>
-                          <div class="input-group date" id="flightReturnDate">
-                              <input class="form-control" type="text" placeholder="Return Date">
+                          <div class="input-group date">
+                              <input class="form-control" id="flightReturnDate" type="text" placeholder="Return Date">
                               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                           </div>
                         </div>
@@ -168,7 +168,7 @@
                 <div class="itinerary well">
                     <div class="row">
                       <div class="col-md-12 col-lg-2">
-                         <div class="col-md-6"><img src="http://placehold.it/100x60"></div>
+                         <div class="col-md-6"><img alt="airline name" src="http://placehold.it/100x60"></div>
                       </div>
                       <div class="col-md-12 col-lg-8">
                           <div class="row">
@@ -230,7 +230,7 @@
                 <div class="itinerary well">
                     <div class="row">
                       <div class="col-md-12 col-lg-2">
-                         <div class="col-md-6"><img src="http://placehold.it/100x60"></div>
+                         <div class="col-md-6"><img alt="airline name" src="http://placehold.it/100x60"></div>
                       </div>
                       <div class="col-md-12 col-lg-8">
                           <div class="row">
@@ -292,7 +292,7 @@
                 <div class="itinerary well">
                     <div class="row">
                       <div class="col-md-12 col-lg-2">
-                         <div class="col-md-6"><img src="http://placehold.it/100x60"></div>
+                         <div class="col-md-6"><img alt="airline name" src="http://placehold.it/100x60"></div>
                       </div>
                       <div class="col-md-12 col-lg-8">
                           <div class="row">
@@ -354,7 +354,7 @@
                 <div class="itinerary well">
                     <div class="row">
                       <div class="col-md-12 col-lg-2">
-                         <div class="col-md-6"><img src="http://placehold.it/100x60"></div>
+                         <div class="col-md-6"><img alt="airline name" src="http://placehold.it/100x60"></div>
                       </div>
                       <div class="col-md-12 col-lg-8">
                           <div class="row">
