@@ -1,0 +1,14 @@
+/* mixins */
+
+/* shadow box */
+.box-with-shadow(@bgcolor:#fff, @bordercolor:@border-color, @shadowcolor: #dbdddd) {  background: @bgcolor; border: 1px solid @bordercolor; -webkit-box-shadow: 0 2px 2px 0 @shadowcolor; box-shadow: 0 2px 2px 0 @shadowcolor; }
+.shadowbox { .box-with-shadow(); padding: 15px;}
+
+
+/* font size  */
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
