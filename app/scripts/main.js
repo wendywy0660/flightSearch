@@ -4,6 +4,15 @@ $(function(){
 
 	// tabs
 	$('#flightSearchTab a[href="#return"]').tab('show');
+	// Just for demo purpose -- ToBeRemoved
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		var $returnDate = $('.searchCriteria .return');
+		if ($(e.target).data('flightType') === 'oneway') {
+			$returnDate.hide();
+		} else {
+			$returnDate.show();
+		}
+	})
 
 	// Price range slider 
 	$('#priceRefine').noUiSlider({
@@ -22,6 +31,7 @@ $(function(){
 	$('#flightSearchTab .input-group.date').datepicker({
 		format: 'dd/mm/yyyy',
     	startDate: 'today',
+    	autoclose: true,
 	    todayHighlight: true
 	});
 
@@ -30,7 +40,7 @@ $(function(){
 	function textReplace() {
 		var $airport = $('.airport'); 
 		var win = $(window);
-		if (win.width()>970 && win.width()<1500 ) {
+		if ((win.width()>970 && win.width()<1500) ||  win.width()<768) {
 			$airport.each(function() {
 				var $this = $(this);
 				var replaceText = $this.attr('data-airport-code');

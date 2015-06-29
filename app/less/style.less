@@ -25,17 +25,21 @@ h1, h2, h3, h4, h5 {
   border: 0;
 }
 .navbar h1 { color: @text-light-color; margin: 0; }
+
 /*
  * Sidebar
  */
-
 .sidebar {
   .nav-tabs { 
     background-color: @bg-color; 
     &>li { margin-bottom: 0; }
-    .active { background-color: lighten(@bg-color, 10%); }
+    .active { 
+      /*background-color: lighten(@bg-color, 10%);*/ 
+      a { font-weight: 700; }
+    }
   }
-  h3 { .font-size(1.8); margin-top: 0; }
+  .tab-content { padding: 5px 10px; }
+  h3 { .font-size(1.8); font-weight: 700; margin-top: 0; }
   .priceValue { overflow: hidden; font-weight: bold; }
   .priceLow, .priceHigh { 
     float: left;
@@ -48,18 +52,9 @@ h1, h2, h3, h4, h5 {
 
 }
 
-/* Sidebar navigation */
-.nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
-}
-
-
 /*
  * Main content
  */
-
 .main {
   padding: 20px;
 }
@@ -74,7 +69,10 @@ h1, h2, h3, h4, h5 {
 .flightResult {
   .itinerary {
     // .shadowbox();
-    .outbound, .inbound { background-color: @grey-bg-1; padding: 15px; }
+    .outbound, .inbound { 
+      background-color: @grey-bg-1; padding: 15px; cursor: pointer;
+      &:hover { background-color: @grey-bg-hover; }
+    }
     .inbound { background-color: @grey-bg-2;  }
     .price { color: @heading-color; font-size: 2.2rem; font-weight: bold; }
     .origin, .destination { font-weight: bold; }
