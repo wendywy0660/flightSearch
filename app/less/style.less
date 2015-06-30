@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5 {
     }
   }
   .tab-content { padding: 5px 10px; }
+  .form-group .form-control:focus, .form-group-default .form-control:focus {
+    background-image: linear-gradient(@bg-color, @bg-color), linear-gradient(#d2d2d2, #d2d2d2);
+  }
+
   h3 { .font-size(1.8); font-weight: 700; margin-top: 0; }
   .priceValue { overflow: hidden; font-weight: bold; }
   .priceLow, .priceHigh { 
